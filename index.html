@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" />
+    <title>CaixaMaster</title>
+    <meta name="description" content="Gamified study platform for Caixa Econômica federal, combining daily challenges, performance tracking, and concise prep for exams." />
+    
+    <!-- Suppress harmless Vite HMR WebSocket errors in sandbox environment -->
+    <script>
+      (function() {
+        window.addEventListener('error', function(event) {
+          if (
+            event.message &&
+            (event.message.indexOf('WebSocket') !== -1 ||
+             event.message.indexOf('vite') !== -1)
+          ) {
+            event.stopImmediatePropagation();
+            event.preventDefault();
+            return true;
+          }
+        }, true);
+        window.addEventListener('unhandledrejection', function(event) {
+          var reason = event.reason;
+          if (
+            reason &&
+            ((reason.message && (reason.message.indexOf('WebSocket') !== -1 || reason.message.indexOf('vite') !== -1)) ||
+             (typeof reason === 'string' && (reason.indexOf('WebSocket') !== -1 || reason.indexOf('vite') !== -1)))
+          ) {
+            event.stopImmediatePropagation();
+            event.preventDefault();
+          }
+        }, true);
+      })();
+    </script>
+
+    <!-- OpenGraph & Twitter -->
+    <meta property="og:title" content="CaixaMaster" />
+    <meta property="og:description" content="Gamified study platform for Caixa Econômica federal, combining daily challenges, performance tracking, and concise prep for exams." />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="/pwa-512x512.png" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="CaixaMaster" />
+    <meta name="twitter:description" content="Gamified study platform for Caixa Econômica federal, combining daily challenges, performance tracking, and concise prep for exams." />
+
+    <!-- PWA & Mobile Meta -->
+    <meta name="theme-color" content="#004481" />
+    <meta name="color-scheme" content="light dark" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="apple-mobile-web-app-title" content="CaixaMaster" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    <link rel="icon" type="image/svg+xml" href="/icon.svg" />
+    <link rel="icon" type="image/png" sizes="192x192" href="/pwa-192x192.png" />
+
+    <!-- Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  </head>
+  <body class="bg-[#001D3D] text-slate-100 antialiased selection:bg-[#F39200] selection:text-white">
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>

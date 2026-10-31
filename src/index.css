@@ -1,0 +1,91 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --color-cef-blue: #004481;
+    --color-cef-dark: #002244;
+    --color-cef-deep: #00172e;
+    --color-cef-cyan: #00a3e0;
+    --color-cef-orange: #f39200;
+    --color-cef-gold: #ffb81c;
+  }
+
+  body {
+    font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+    background-color: #00162b;
+    color: #f1f5f9;
+    user-select: none;
+    -webkit-tap-highlight-color: transparent;
+    overflow-x: hidden;
+  }
+}
+
+/* Custom Neofuturistic Caixa Utilities */
+.glow-cef {
+  box-shadow: 0 0 20px -3px rgba(0, 163, 224, 0.45);
+}
+
+.glow-orange {
+  box-shadow: 0 0 20px -3px rgba(243, 146, 0, 0.55);
+}
+
+.glow-card {
+  box-shadow: 0 8px 32px 0 rgba(0, 45, 87, 0.37);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
+/* Duolingo-style 3D tactile buttons */
+.btn-duo-orange {
+  background-color: #f39200;
+  box-shadow: 0 4px 0 #b36b00;
+  transition: all 0.1s ease;
+}
+.btn-duo-orange:active {
+  transform: translateY(3px);
+  box-shadow: 0 1px 0 #b36b00;
+}
+
+.btn-duo-blue {
+  background-color: #0066b2;
+  box-shadow: 0 4px 0 #004481;
+  transition: all 0.1s ease;
+}
+.btn-duo-blue:active {
+  transform: translateY(3px);
+  box-shadow: 0 1px 0 #004481;
+}
+
+.btn-duo-green {
+  background-color: #10b981;
+  box-shadow: 0 4px 0 #059669;
+  transition: all 0.1s ease;
+}
+.btn-duo-green:active {
+  transform: translateY(3px);
+  box-shadow: 0 1px 0 #059669;
+}
+
+/* Safe area support for PWA on iOS devices */
+.safe-top {
+  padding-top: max(env(safe-area-inset-top), 0.75rem);
+}
+.safe-bottom {
+  padding-bottom: max(env(safe-area-inset-bottom), 1rem);
+}
+
+/* Custom modern scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #001d3d;
+}
+::-webkit-scrollbar-thumb {
+  background: #004481;
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #00a3e0;
+}
